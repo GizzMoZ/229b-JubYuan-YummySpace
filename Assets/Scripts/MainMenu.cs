@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+   public void LoadScene(string LevelSelect)
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void QuitGame()

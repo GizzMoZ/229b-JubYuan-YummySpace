@@ -3,6 +3,7 @@
 public class PlayerCheckpoint : MonoBehaviour
 {
     public Transform currentCheckpoint;
+    public float deathY = -10f;
 
     void Start()
     {
@@ -13,6 +14,16 @@ public class PlayerCheckpoint : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
+
+        if (transform.position.y < deathY)
         {
             Respawn();
         }

@@ -124,6 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1612684095180778873}
   - component: {fileID: 5053972535180567361}
+  - component: {fileID: 7909327489248710087}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -170,6 +171,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7909327489248710087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082470365673552704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 455d401d66a9f1945a0915e7343c26ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Spawnpoint
+  spawnPoint: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &2661967293716268114
 GameObject:
   m_ObjectHideFlags: 0

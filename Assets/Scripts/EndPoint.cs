@@ -6,8 +6,7 @@ public class EndPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("LEVEL COMPLETE!");
-            // You can load next scene here later
+            FindObjectOfType<GameTimer>().StopTimer();
         }
     }
 }

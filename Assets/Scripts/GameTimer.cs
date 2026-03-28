@@ -32,13 +32,10 @@ public class GameTimer : MonoBehaviour
 {
     isRunning = false;
 
-    // เปิดหน้าจอจบเกม
     if (finishPanel != null) finishPanel.SetActive(true);
 
-    // แสดงเวลา
     if (finalTimeText != null) finalTimeText.text = "Final Time: " + timerText.text;
 
-    // อัปเดตตัวเลข Reset อีกรอบก่อนโชว์
     if (resetText != null) 
     {
         resetText.text = "Reset Count: " + PlayerCheckpoint.resetCount.ToString();

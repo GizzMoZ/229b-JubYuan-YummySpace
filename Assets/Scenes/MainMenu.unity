@@ -521,7 +521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59e2314c3d63f65438b271a5d42a6ed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59a8012f5ad745a49a556a8c652d76c8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1507,7 +1507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ASTEROID ATTACK
+  m_text: Yummy Space
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 47657525696d3dd439a97c477f9de5f8, type: 2}
   m_sharedMaterial: {fileID: -4403624643775099923, guid: 47657525696d3dd439a97c477f9de5f8, type: 2}

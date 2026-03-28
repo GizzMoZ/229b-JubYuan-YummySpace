@@ -29,16 +29,20 @@ public class GameTimer : MonoBehaviour
     }
 
     public void StopTimer()
+{
+    isRunning = false;
+
+    // เปิดหน้าจอจบเกม
+    if (finishPanel != null) finishPanel.SetActive(true);
+
+    // แสดงเวลา
+    if (finalTimeText != null) finalTimeText.text = "Final Time: " + timerText.text;
+
+    // อัปเดตตัวเลข Reset อีกรอบก่อนโชว์
+    if (resetText != null) 
     {
-        isRunning = false;
-
-        // 🖥 Show finish UI
-        finishPanel.SetActive(true);
-
-        // 🥇 Show final time
-        finalTimeText.text = "Final Time: " + timerText.text;
-
-        resetText.text = "Reset Count: " + ResetLevel.resetCount;
-
+        resetText.text = "Reset Count: " + PlayerCheckpoint.resetCount.ToString();
+        Debug.Log("UI Updated with: " + PlayerCheckpoint.resetCount); // เช็คใน Console อีกที
     }
+}
 }

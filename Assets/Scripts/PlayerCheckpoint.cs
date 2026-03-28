@@ -28,6 +28,7 @@ public class PlayerCheckpoint : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             resetCount++;
+            Debug.Log("Reset Count: " + resetCount);
             Respawn();
         }
 

@@ -6,6 +6,8 @@ public class PlayerCheckpoint : MonoBehaviour
     public Transform currentCheckpoint;
     public float deathY = -10f;
 
+    public static int resetCount = 0; // 🔁 นับจำนวน Reset
+
     private bool isDead = false;
     private Rigidbody rb;
 
@@ -17,19 +19,19 @@ public class PlayerCheckpoint : MonoBehaviour
 
     void Update()
     {
-        // 💀 Detect fall
-        if (!isDead && transform.position.y < deathY)
-        {
-            Die();
-        }
+        if (transform.position.y < deathY)
+    {
+        Respawn();
+    }
 
-        // 🔁 R works ALWAYS
+        // 🔁 กด R กลับ Checkpoint
         if (Input.GetKeyDown(KeyCode.R))
         {
+            resetCount++;
             Respawn();
         }
 
-        // ❌ Q only when dead
+        // ❌ กด Q ออกเกมเมื่อ Player ตาย
         if (isDead && Input.GetKeyDown(KeyCode.Q))
         {
             QuitGame();

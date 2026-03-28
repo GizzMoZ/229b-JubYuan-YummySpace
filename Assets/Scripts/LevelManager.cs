@@ -7,13 +7,4 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(levelName);
     }
-     public void UnlockNextLevel(int currentLevel)
-    {
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
-
-        if (currentLevel >= unlockedLevel)
-        {
-            PlayerPrefs.SetInt("UnlockedLevel", currentLevel + 1);
-        }
-    }
 }

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEditor;
 
 public class GameTimer : MonoBehaviour
 {
     public TextMeshProUGUI timerText;
     public GameObject finishPanel;
     public TextMeshProUGUI finalTimeText;
+    public TextMeshProUGUI resetText;
 
     private float time;
     private bool isRunning = true;
@@ -35,5 +37,8 @@ public class GameTimer : MonoBehaviour
 
         // 🥇 Show final time
         finalTimeText.text = "Final Time: " + timerText.text;
+
+        resetText.text = "Reset Count: " + ResetLevel.resetCount;
+
     }
 }
